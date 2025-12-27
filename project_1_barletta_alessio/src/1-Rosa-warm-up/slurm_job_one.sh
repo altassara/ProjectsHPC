@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --job-name=slurm_job_one      # Job name    (default: sbatch)
+#SBATCH --output=slurm_job_one-%j.out # Output file (default: slurm-%j.out)
+#SBATCH --error=slurm_job_one-%j.err  # Error file  (default: slurm-%j.out)
+#SBATCH --ntasks=1                    # Number of tasks
+#SBATCH --cpus-per-task=1             # Number of CPUs per task
+#SBATCH --time=00:01:00               # Wall clock time limit
+#SBATCH --partition=slim              # Which partition to use (to target node with different memories) source: slurm documentation
+
+
+# load some modules & list loaded modules
+module load gcc
+module list
+
+# compile the script
+g++ hello_world.cpp -o hello_worldc
+
+# print CPU model
+lscpu | grep "Model name"
+
+# run (srun: run job on cluster with provided resources/allocation)
+srun ./hello_worldc

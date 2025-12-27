@@ -1,0 +1,21 @@
+size:		100000		threads: 		1		serial = 		0.0115715		reduction = 		0.0117188		critical = 		0.201065
+size:		100000		threads: 		2		serial = 		0.0115715		reduction = 		0.00594948		critical = 		0.585415
+size:		100000		threads: 		4		serial = 		0.0115715		reduction = 		0.00312556		critical = 		0.736543
+size:		100000		threads: 		8		serial = 		0.0115715		reduction = 		0.00181107		critical = 		0.993253
+size:		100000		threads: 		16		serial = 		0.0115715		reduction = 		0.00804562		critical = 		2.41426
+size:		100000		threads: 		20		serial = 		0.0115715		reduction = 		0.00722455		critical = 		2.44382
+----------------------------------------
+size:		1000000		threads: 		1		serial = 		0.11578		reduction = 		0.115883		critical = 		2.00916
+size:		1000000		threads: 		2		serial = 		0.11578		reduction = 		0.0580754		critical = 		7.07123
+size:		1000000		threads: 		4		serial = 		0.11578		reduction = 		0.02913		critical = 		7.7147
+size:		1000000		threads: 		8		serial = 		0.11578		reduction = 		0.0148712		critical = 		9.85449
+size:		1000000		threads: 		16		serial = 		0.11578		reduction = 		0.0270257		critical = 		26.1028
+size:		1000000		threads: 		20		serial = 		0.11578		reduction = 		0.0250775		critical = 		26.2341
+----------------------------------------
+size:		10000000		threads: 		1		serial = 		1.35046		reduction = 		1.35147		critical = 		20.1948
+size:		10000000		threads: 		2		serial = 		1.35046		reduction = 		0.692264		critical = 		62.2598
+size:		10000000		threads: 		4		serial = 		1.35046		reduction = 		0.369768		critical = 		64.8617
+size:		10000000		threads: 		8		serial = 		1.35046		reduction = 		0.275496		critical = 		101.084
+size:		10000000		threads: 		16		serial = 		1.35046		reduction = 		0.322982		critical = 		266.362
+size:		10000000		threads: 		20		serial = 		1.35046		reduction = 		0.31457		critical = 		266.988
+----------------------------------------

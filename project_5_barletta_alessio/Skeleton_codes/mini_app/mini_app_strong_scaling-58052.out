@@ -1,0 +1,37 @@
+Loading gcc/13.2.0-gcc-8.5.0-5hqhkwo
+  Loading requirement: gmp/6.2.1-gcc-8.5.0-lrpcvy5 mpfr/4.2.1-gcc-8.5.0-ybeybcx
+    mpc/1.3.1-gcc-8.5.0-cv2gjfw
+
+Loading openmpi/5.0.5
+  Loading requirement: ucx/1.15.0-gcc-8.5.0-cnozz5i
+Currently Loaded Modulefiles:
+ 1) gcc-runtime/8.5.0-gcc-8.5.0-7fyorqa       23) gmp/6.2.1-gcc-8.5.0-lrpcvy5   
+ 2) bzip2/1.0.8-gcc-8.5.0-iencqgj             24) mpfr/4.2.1-gcc-8.5.0-ybeybcx  
+ 3) libmd/1.0.4-gcc-8.5.0-vceijgj             25) mpc/1.3.1-gcc-8.5.0-cv2gjfw   
+ 4) libbsd/0.12.1-gcc-8.5.0-zws72vm           26) gcc/13.2.0-gcc-8.5.0-5hqhkwo  
+ 5) expat/2.6.2-gcc-8.5.0-nvpfu3g             27) ucx/1.15.0-gcc-8.5.0-cnozz5i  
+ 6) ncurses/6.4-gcc-8.5.0-njp6ntc             28) openmpi/5.0.5                 
+ 7) readline/8.2-gcc-8.5.0-zxro3ui            
+ 8) gdbm/1.23-gcc-8.5.0-jjbrmpa               
+ 9) libiconv/1.17-gcc-8.5.0-rznbc3y           
+10) xz/5.4.6-gcc-8.5.0-lmjjipf                
+11) zlib-ng/2.1.6-gcc-8.5.0-ztbc5xt           
+12) libxml2/2.10.3-gcc-8.5.0-7kur2mf          
+13) pigz/2.8-gcc-8.5.0-zmpx3tm                
+14) zstd/1.5.5-gcc-8.5.0-azepnn7              
+15) tar/1.34-gcc-8.5.0-4dbwlae                
+16) gettext/0.22.4-gcc-8.5.0-ayonqls          
+17) libffi/3.4.6-gcc-8.5.0-rwsr5pv            
+18) libxcrypt/4.4.35-gcc-8.5.0-jgrwltl        
+19) openssl/3.2.1-gcc-8.5.0-p6hkih2           
+20) sqlite/3.43.2-gcc-8.5.0-447q5jn           
+21) util-linux-uuid/2.38.1-gcc-8.5.0-nj45fvo  
+22) python/3.11.7-gcc-8.5.0-xhbe4xp           
+rm -f main walltime.o   stats.o   data.o   operators.o   linalg.o   main.o output.*
+mpic++ -O3 -c walltime.cpp
+mpic++ -O3 -c stats.cpp
+mpic++ -O3 -c data.cpp
+mpic++ -O3 -c operators.cpp
+mpic++ -O3 -c linalg.cpp
+mpic++ -O3 -c main.cpp
+mpic++ -O3 walltime.o   stats.o   data.o   operators.o   linalg.o   main.o -o main -lm

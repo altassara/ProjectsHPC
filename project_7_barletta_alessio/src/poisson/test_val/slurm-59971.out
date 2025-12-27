@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/barlea/Project7HPC/src/poisson/test_val/../poisson_py.py", line 28, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+Traceback (most recent call last):
+  File "/home/barlea/Project7HPC/src/poisson/test_val/../draw.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+Traceback (most recent call last):
+  File "/home/barlea/Project7HPC/src/poisson/test_val/../draw.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+----------------------------------------------------------------------------------------------------
+Poisson's Equation Solver PETSc for 128x32
+----------------------------------------------------------------------------------------------------
+Grid size after refinement: nx=128, ny=32
+Time for RHS & Matrix Assembly: 0.004248 seconds
+Time for Solve: 0.005802 seconds
+L2 Norm of the solution: 51.755726
+Traceback (most recent call last):
+  File "/home/barlea/Project7HPC/src/poisson/test_val/../draw.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'

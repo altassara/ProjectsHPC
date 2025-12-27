@@ -1,0 +1,19 @@
+Loading gcc/13.2.0-gcc-8.5.0-5hqhkwo
+  Loading requirement: gcc-runtime/8.5.0-gcc-8.5.0-7fyorqa
+    gmp/6.2.1-gcc-8.5.0-lrpcvy5 mpfr/4.2.1-gcc-8.5.0-ybeybcx
+    mpc/1.3.1-gcc-8.5.0-cv2gjfw zlib-ng/2.1.6-gcc-8.5.0-ztbc5xt
+    zstd/1.5.5-gcc-8.5.0-azepnn7
+
+Loading openmpi/5.0.5
+  Loading requirement: ucx/1.15.0-gcc-8.5.0-cnozz5i
+rm -f *.o powermethod_rows
+mpicc -c -O3  powermethod_rows.c
+mpicc -c -O3  walltime.c
+mpicc -lm  powermethod_rows.o walltime.o -o powermethod_rows
+--- DIFFERENT NODES ANALYSIS ---
+Done P=1 on Different Nodes
+Done P=2 on Different Nodes
+Done P=4 on Different Nodes
+Done P=8 on Different Nodes
+Done P=16 on Different Nodes
+Done P=20 on Different Nodes

@@ -1,0 +1,202 @@
+Loading gcc/13.2.0-gcc-8.5.0-5hqhkwo
+  Loading requirement: gcc-runtime/8.5.0-gcc-8.5.0-7fyorqa
+    gmp/6.2.1-gcc-8.5.0-lrpcvy5 mpfr/4.2.1-gcc-8.5.0-ybeybcx
+    mpc/1.3.1-gcc-8.5.0-cv2gjfw zlib-ng/2.1.6-gcc-8.5.0-ztbc5xt
+    zstd/1.5.5-gcc-8.5.0-azepnn7
+
+Loading openmpi/5.0.5
+  Loading requirement: ucx/1.15.0-gcc-8.5.0-cnozz5i
+Currently Loaded Modulefiles:
+ 1) gcc-runtime/8.5.0-gcc-8.5.0-7fyorqa   6) zstd/1.5.5-gcc-8.5.0-azepnn7  
+ 2) gmp/6.2.1-gcc-8.5.0-lrpcvy5           7) gcc/13.2.0-gcc-8.5.0-5hqhkwo  
+ 3) mpfr/4.2.1-gcc-8.5.0-ybeybcx          8) ucx/1.15.0-gcc-8.5.0-cnozz5i  
+ 4) mpc/1.3.1-gcc-8.5.0-cv2gjfw           9) openmpi/5.0.5                 
+ 5) zlib-ng/2.1.6-gcc-8.5.0-ztbc5xt      
+rm -f *.o powermethod_rows
+mpicc -c -O3  powermethod_rows.c
+mpicc -c -O3  walltime.c
+mpicc -lm  powermethod_rows.o walltime.o -o powermethod_rows
+Doing 100 power iterations on 1000x1000 matrix distributed row-wise over 16 processes...
+[Proc   0] Doing rows 0 to 62
+[Proc   2] Doing rows 126 to 188
+[Proc   3] Doing rows 189 to 251
+[Proc   1] Doing rows 63 to 125
+[Proc  10] Doing rows 628 to 689
+[Proc   7] Doing rows 441 to 503
+[Proc   8] Doing rows 504 to 565
+[Proc   5] Doing rows 315 to 377
+[Proc  11] Doing rows 690 to 751
+[Proc   4] Doing rows 252 to 314
+[Proc   9] Doing rows 566 to 627
+[Proc  12] Doing rows 752 to 813
+[Proc   6] Doing rows 378 to 440
+[Proc  15] Doing rows 938 to 999
+[Proc  14] Doing rows 876 to 937
+[Proc  13] Doing rows 814 to 875
+iteration / theta/ error:    0 /       744.98375 /     4.358703499394812e+02
+iteration / theta/ error:    1 /      1000.00000 /     1.404333387430680e-11
+Power method: Converged in 1 iteration(s) to largest absolute eigenvalue theta = 1000.000000 in 0.005839 second(s) time.
+### 16, 1000, 1, 1000.000000, 0.005839 ###
+[Proc   3] Doing rows 189 to 251
+Doing 100 power iterations on 1000x1000 matrix distributed row-wise over 16 processes...
+[Proc   0] Doing rows 0 to 62
+[Proc   2] Doing rows 126 to 188
+[Proc   1] Doing rows 63 to 125
+[Proc  14] Doing rows 876 to 937
+[Proc   5] Doing rows 315 to 377
+[Proc  10] Doing rows 628 to 689
+[Proc  13] Doing rows 814 to 875
+[Proc   7] Doing rows 441 to 503
+[Proc  12] Doing rows 752 to 813
+[Proc   4] Doing rows 252 to 314
+[Proc  15] Doing rows 938 to 999
+[Proc   6] Doing rows 378 to 440
+[Proc  11] Doing rows 690 to 751
+[Proc   8] Doing rows 504 to 565
+[Proc   9] Doing rows 566 to 627
+iteration / theta/ error:    0 /         1.00000 /     2.286104331507951e-16
+Power method: Converged in 0 iteration(s) to largest absolute eigenvalue theta = 1.000000 in 0.004737 second(s) time.
+### 16, 1000, 0, 1.000000, 0.004737 ###
+Doing 100 power iterations on 1000x1000 matrix distributed row-wise over 16 processes...
+[Proc   0] Doing rows 0 to 62
+[Proc   2] Doing rows 126 to 188
+[Proc   1] Doing rows 63 to 125
+[Proc   3] Doing rows 189 to 251
+[Proc  15] Doing rows 938 to 999
+[Proc   7] Doing rows 441 to 503
+[Proc  13] Doing rows 814 to 875
+[Proc   5] Doing rows 315 to 377
+[Proc  14] Doing rows 876 to 937
+[Proc   6] Doing rows 378 to 440
+[Proc   8] Doing rows 504 to 565
+[Proc   9] Doing rows 566 to 627
+[Proc   4] Doing rows 252 to 314
+[Proc  12] Doing rows 752 to 813
+[Proc  10] Doing rows 628 to 689
+[Proc  11] Doing rows 690 to 751
+iteration / theta/ error:    0 /       484.37520 /     2.884102228876429e+02
+iteration / theta/ error:    1 /       742.40427 /     1.952317819871787e+02
+iteration / theta/ error:    2 /       827.95838 /     1.424022767674070e+02
+iteration / theta/ error:    3 /       870.84799 /     1.116315797680866e+02
+iteration / theta/ error:    4 /       896.59046 /     9.147585889712516e+01
+iteration / theta/ error:    5 /       913.67891 /     7.731195782955869e+01
+iteration / theta/ error:    6 /       925.80978 /     6.685598991605828e+01
+iteration / theta/ error:    7 /       934.84836 /     5.884062131124882e+01
+iteration / theta/ error:    8 /       941.83380 /     5.251307123362084e+01
+iteration / theta/ error:    9 /       947.38971 /     4.740272329394884e+01
+iteration / theta/ error:   10 /       951.91294 /     4.320137123435641e+01
+iteration / theta/ error:   11 /       955.66808 /     3.969804818524731e+01
+iteration / theta/ error:   12 /       958.83818 /     3.674241645729571e+01
+iteration / theta/ error:   13 /       961.55371 /     3.422361932008917e+01
+iteration / theta/ error:   14 /       963.90983 /     3.205765407909020e+01
+iteration / theta/ error:   15 /       965.97742 /     3.017952595589640e+01
+iteration / theta/ error:   16 /       967.81011 /     2.853815307292162e+01
+iteration / theta/ error:   17 /       969.44908 /     2.709291033796866e+01
+iteration / theta/ error:   18 /       970.92642 /     2.581119145535359e+01
+iteration / theta/ error:   19 /       972.26739 /     2.466663249531699e+01
+iteration / theta/ error:   20 /       973.49211 /     2.363778430494306e+01
+iteration / theta/ error:   21 /       974.61679 /     2.270710118508466e+01
+iteration / theta/ error:   22 /       975.65460 /     2.186015939722676e+01
+iteration / theta/ error:   23 /       976.61637 /     2.108504672911804e+01
+iteration / theta/ error:   24 /       977.51104 /     2.037188169293398e+01
+iteration / theta/ error:   25 /       978.34610 /     1.971243229659891e+01
+iteration / theta/ error:   26 /       979.12784 /     1.909981208317583e+01
+iteration / theta/ error:   27 /       979.86161 /     1.852823660513286e+01
+iteration / theta/ error:   28 /       980.55198 /     1.799282746737457e+01
+iteration / theta/ error:   29 /       981.20289 /     1.748945400961911e+01
+iteration / theta/ error:   30 /       981.81775 /     1.701460490732109e+01
+iteration / theta/ error:   31 /       982.39954 /     1.656528365145680e+01
+iteration / theta/ error:   32 /       982.95088 /     1.613892315893938e+01
+iteration / theta/ error:   33 /       983.47408 /     1.573331576471975e+01
+iteration / theta/ error:   34 /       983.97119 /     1.534655562434728e+01
+iteration / theta/ error:   35 /       984.44404 /     1.497699116394103e+01
+iteration / theta/ error:   36 /       984.89429 /     1.462318569205478e+01
+iteration / theta/ error:   37 /       985.32342 /     1.428388466420567e+01
+iteration / theta/ error:   38 /       985.73277 /     1.395798838828741e+01
+iteration / theta/ error:   39 /       986.12357 /     1.364452919491566e+01
+iteration / theta/ error:   40 /       986.49693 /     1.334265228423978e+01
+iteration / theta/ error:   41 /       986.85387 /     1.305159961021601e+01
+iteration / theta/ error:   42 /       987.19534 /     1.277069628279664e+01
+iteration / theta/ error:   43 /       987.52221 /     1.249933906423137e+01
+iteration / theta/ error:   44 /       987.83526 /     1.223698661261681e+01
+iteration / theta/ error:   45 /       988.13526 /     1.198315118783561e+01
+iteration / theta/ error:   46 /       988.42289 /     1.173739158514354e+01
+iteration / theta/ error:   47 /       988.69880 /     1.149930710229583e+01
+iteration / theta/ error:   48 /       988.96358 /     1.126853237914858e+01
+iteration / theta/ error:   49 /       989.21780 /     1.104473297563903e+01
+iteration / theta/ error:   50 /       989.46199 /     1.082760157612613e+01
+iteration / theta/ error:   51 /       989.69664 /     1.061685472621637e+01
+iteration / theta/ error:   52 /       989.92220 /     1.041223002315919e+01
+iteration / theta/ error:   53 /       990.13913 /     1.021348369327744e+01
+iteration / theta/ error:   54 /       990.34783 /     1.002038850018147e+01
+iteration / theta/ error:   55 /       990.54869 /     9.832731936088285e+00
+iteration / theta/ error:   56 /       990.74208 /     9.650314655736278e+00
+iteration / theta/ error:   57 /       990.92834 /     9.472949118406335e+00
+iteration / theta/ error:   58 /       991.10779 /     9.300458408626955e+00
+iteration / theta/ error:   59 /       991.28076 /     9.132675210423619e+00
+iteration / theta/ error:   60 /       991.44752 /     8.969440913598149e+00
+iteration / theta/ error:   61 /       991.60836 /     8.810604833606547e+00
+iteration / theta/ error:   62 /       991.76355 /     8.656023529225752e+00
+iteration / theta/ error:   63 /       991.91332 /     8.505560204439108e+00
+iteration / theta/ error:   64 /       992.05793 /     8.359084182885125e+00
+iteration / theta/ error:   65 /       992.19759 /     8.216470444853712e+00
+iteration / theta/ error:   66 /       992.33251 /     8.077599218220087e+00
+iteration / theta/ error:   67 /       992.46291 /     7.942355615915053e+00
+iteration / theta/ error:   68 /       992.58897 /     7.810629313568780e+00
+iteration / theta/ error:   69 /       992.71087 /     7.682314261858095e+00
+iteration / theta/ error:   70 /       992.82880 /     7.557308428856003e+00
+iteration / theta/ error:   71 /       992.94292 /     7.435513568345673e+00
+iteration / theta/ error:   72 /       993.05339 /     7.316835010628990e+00
+iteration / theta/ error:   73 /       993.16035 /     7.201181472852437e+00
+iteration / theta/ error:   74 /       993.26396 /     7.088464886294994e+00
+iteration / theta/ error:   75 /       993.36434 /     6.978600238426126e+00
+iteration / theta/ error:   76 /       993.46164 /     6.871505427855848e+00
+iteration / theta/ error:   77 /       993.55597 /     6.767101130566346e+00
+iteration / theta/ error:   78 /       993.64745 /     6.665310676046658e+00
+iteration / theta/ error:   79 /       993.73621 /     6.566059932149263e+00
+iteration / theta/ error:   80 /       993.82233 /     6.469277197658975e+00
+iteration / theta/ error:   81 /       993.90594 /     6.374893101706799e+00
+iteration / theta/ error:   82 /       993.98712 /     6.282840509290395e+00
+iteration / theta/ error:   83 /       994.06598 /     6.193054432263988e+00
+iteration / theta/ error:   84 /       994.14259 /     6.105471945255828e+00
+iteration / theta/ error:   85 /       994.21706 /     6.020032106045460e+00
+iteration / theta/ error:   86 /       994.28945 /     5.936675879999990e+00
+iteration / theta/ error:   87 /       994.35986 /     5.855346068224219e+00
+iteration / theta/ error:   88 /       994.42835 /     5.775987239126131e+00
+iteration / theta/ error:   89 /       994.49499 /     5.698545663141087e+00
+iteration / theta/ error:   90 /       994.55987 /     5.622969250389007e+00
+iteration / theta/ error:   91 /       994.62303 /     5.549207491070113e+00
+iteration / theta/ error:   92 /       994.68454 /     5.477211398427316e+00
+iteration / theta/ error:   93 /       994.74448 /     5.406933454124246e+00
+iteration / theta/ error:   94 /       994.80288 /     5.338327555904263e+00
+iteration / theta/ error:   95 /       994.85981 /     5.271348967411032e+00
+iteration / theta/ error:   96 /       994.91532 /     5.205954270062269e+00
+iteration / theta/ error:   97 /       994.96947 /     5.142101316878978e+00
+iteration / theta/ error:   98 /       995.02230 /     5.079749188181360e+00
+iteration / theta/ error:   99 /       995.07385 /     5.018858149067264e+00
+Power method: NOT converged in 100 iteration(s) to largest absolute eigenvalue theta = 995.073849 in 0.061421 second(s) time.
+### 16, 1000, 100, 995.073849, 0.061421 ###
+[Proc   2] Doing rows 126 to 188
+[Proc   1] Doing rows 63 to 125
+[Proc   3] Doing rows 189 to 251
+Doing 100 power iterations on 1000x1000 matrix distributed row-wise over 16 processes...
+[Proc   0] Doing rows 0 to 62
+[Proc   8] Doing rows 504 to 565
+[Proc   6] Doing rows 378 to 440
+[Proc  13] Doing rows 814 to 875
+[Proc  10] Doing rows 628 to 689
+[Proc   7] Doing rows 441 to 503
+[Proc  14] Doing rows 876 to 937
+[Proc   5] Doing rows 315 to 377
+[Proc  15] Doing rows 938 to 999
+[Proc   4] Doing rows 252 to 314
+[Proc  11] Doing rows 690 to 751
+[Proc   9] Doing rows 566 to 627
+[Proc  12] Doing rows 752 to 813
+iteration / theta/ error:    0 /       373.79455 /     2.176188857049880e+02
+iteration / theta/ error:    1 /       500.03923 /     5.260408120488425e+00
+iteration / theta/ error:    2 /       500.10106 /     1.050590672733909e-01
+iteration / theta/ error:    3 /       500.10124 /     1.792941328996449e-03
+iteration / theta/ error:    4 /       500.10123 /     3.524620091432750e-05
+Power method: Converged in 4 iteration(s) to largest absolute eigenvalue theta = 500.101231 in 0.007400 second(s) time.
+### 16, 1000, 4, 500.101231, 0.007400 ###

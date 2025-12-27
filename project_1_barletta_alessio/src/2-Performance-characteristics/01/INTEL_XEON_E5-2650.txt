@@ -1,0 +1,17 @@
+Intel Xeon E5-2650 v3 @ 2.30GHz:
+
+n_fma = 2 (it supports the FMA instructions)
+n_super = 2 (TP of FMA instruction is 0.5 cycle/instruction so in one cycle 2 instructions are executed )
+f = 2.3 GHz
+n_simd = 256 / 64 = 4 (supports AVX2 SIMD instruction with 256bit registers)
+
+n_cores = 10
+n_sockets = 2
+n_node = 42 (42 compute nodes + 1 login node)
+
+
+P_{core} = 2 x 2 x 4 x 2.30 GHz = 36.8 GFlops/s
+P_{CPU}  = 10 x P_{core}         = 368 GFlops/s
+P_{node} = 2 x P_{CPU}          = 736 GFlops/s
+P_{EVII} = 42 x P_{node}         = 30912 GFlops/s
+                                = 30.912 TFlops/s
